@@ -16,7 +16,7 @@ class WallServiceTest {
     void positiveJumpCatOnWall() {
         WallService wallService = new WallService();
         Wall wall = new Wall(10);
-        Athlete athlete = new Cat(1,11);
+        Athlete athlete = new Cat(1,11,"athlete");
         boolean actual = wallService.jumpToWall(athlete,wall);
 
      Assertions.assertTrue(actual);
@@ -25,7 +25,7 @@ class WallServiceTest {
     void negativeJumpCatOnWall() {
         WallService wallService = new WallService();
         Wall wall = new Wall(10);
-        Athlete athlete = new Cat(1,9);
+        Athlete athlete = new Cat(1,9,"athlete");
         boolean actual = wallService.jumpToWall(athlete,wall);
         Assertions.assertFalse(actual);
     }
@@ -33,7 +33,7 @@ class WallServiceTest {
     void positiveJumpHumanOnWall() {
         WallService wallService = new WallService();
         Wall wall = new Wall(10);
-        Athlete athlete = new Human(1,14);
+        Athlete athlete = new Human(1,14,"athlete");
         boolean actual = wallService.jumpToWall(athlete,wall);
         Assertions.assertTrue(actual);
     }
@@ -41,7 +41,7 @@ class WallServiceTest {
     void negativeJumpHumanOnWall() {
         WallService wallService = new WallService();
         Wall wall = new Wall(10);
-        Athlete athlete = new Human(1,5);
+        Athlete athlete = new Human(1,5,"athlete");
         boolean actual = wallService.jumpToWall(athlete,wall);
         Assertions.assertFalse(actual);
     }
@@ -49,7 +49,7 @@ class WallServiceTest {
     void positiveJumpBotOnWall() {
         WallService wallService = new WallService();
         Wall wall = new Wall(10);
-        Athlete athlete = new Bot(1,20);
+        Athlete athlete = new Bot(1,20,"athlete");
         boolean actual = wallService.jumpToWall(athlete,wall);
         Assertions.assertTrue(actual);
     }
@@ -57,7 +57,7 @@ class WallServiceTest {
     void negativeJumpBotOnWall() {
         WallService wallService = new WallService();
         Wall wall = new Wall(10);
-        Athlete athlete = new Bot(1,1);
+        Athlete athlete = new Bot(1,1,"athlete");
         boolean actual = wallService.jumpToWall(athlete,wall);
         Assertions.assertFalse(actual);
     }

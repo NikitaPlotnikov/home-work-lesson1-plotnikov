@@ -17,7 +17,7 @@ class TreadmillServiceTest {
     void positiveRunCatOnTreadmill() {
         TreadmillService treadmillService = new TreadmillService();
         Treadmill treadmill = new Treadmill(10);
-        Athlete athlete = new Cat(12,20);
+        Athlete athlete = new Cat(12,20,"athlete");
         boolean actual = treadmillService.runOnTreadmill(athlete, treadmill);
         Assertions.assertTrue(actual);
     }
@@ -25,7 +25,7 @@ class TreadmillServiceTest {
     void negativeRunCatOnTreadmill() {
         TreadmillService treadmillService = new TreadmillService();
         Treadmill treadmill = new Treadmill(10);
-        Athlete athlete = new Cat(8,11);
+        Athlete athlete = new Cat(8,11,"athlete");
         boolean actual = treadmillService.runOnTreadmill(athlete, treadmill);
         Assertions.assertFalse(actual);
     }
@@ -33,7 +33,7 @@ class TreadmillServiceTest {
     void positiveRunHumanOnTreadmill() {
         TreadmillService treadmillService = new TreadmillService();
         Treadmill treadmill = new Treadmill(20);
-        Athlete athlete = new Human(20,20);
+        Athlete athlete = new Human(20,20,"athlete");
         boolean actual = treadmillService.runOnTreadmill(athlete, treadmill);
         Assertions.assertTrue(actual);
     }
@@ -41,7 +41,7 @@ class TreadmillServiceTest {
     void negativeRunHumanOnTreadmill() {
         TreadmillService treadmillService = new TreadmillService();
         Treadmill treadmill = new Treadmill(20);
-        Athlete athlete = new Human(19,11);
+        Athlete athlete = new Human(19,11,"athlete");
         boolean actual = treadmillService.runOnTreadmill(athlete, treadmill);
         Assertions.assertFalse(actual);
     }
@@ -49,7 +49,7 @@ class TreadmillServiceTest {
     void positiveRunBotOnTreadmill() {
         TreadmillService treadmillService = new TreadmillService();
         Treadmill treadmill = new Treadmill(55);
-        Athlete athlete = new Bot(1999,20);
+        Athlete athlete = new Bot(1999,20,"athlete");
         boolean actual = treadmillService.runOnTreadmill(athlete, treadmill);
         Assertions.assertTrue(actual);
     }
@@ -57,7 +57,7 @@ class TreadmillServiceTest {
     void negativeRunBotOnTreadmill() {
         TreadmillService treadmillService = new TreadmillService();
         Treadmill treadmill = new Treadmill(10);
-        Athlete athlete = new Bot(2,11);
+        Athlete athlete = new Bot(2,11,"athlete");
         boolean actual = treadmillService.runOnTreadmill(athlete, treadmill);
         Assertions.assertFalse(actual);
     }
